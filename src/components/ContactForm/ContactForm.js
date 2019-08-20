@@ -11,7 +11,7 @@ export default function ContactForm() {
         // call netlify
         try {
 
-            let response = await fetch('/.netlify/functions/test-form', {
+            let response = await fetch('/.netlify/functions/purchase', {
                 method: 'POST',
                 body: JSON.stringify(data),
             });
