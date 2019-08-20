@@ -8,6 +8,8 @@ exports.handler = async (event, context, callback) => {
 
     try {
 
+        console.log("KEY", process.env.SENDGRID_API_KEY);
+
         sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
         const msg = {
@@ -26,6 +28,7 @@ exports.handler = async (event, context, callback) => {
         })
 
     } catch (err) {
+        console.log(err);
         return callback(null, {
             statusCode: 400,
             body: JSON.stringify({
