@@ -29,7 +29,7 @@ exports.handler = async (event, context, callback) => {
         return callback(null, {
             statusCode: 400,
             body: JSON.stringify({
-                message: `Error: ${err.message}`,
+                message: `Error: ${JSON.stringify(err)}`,
             }),
         });
     }
